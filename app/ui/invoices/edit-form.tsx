@@ -10,7 +10,12 @@ import {
 import Link from "next/link";
 import { Button } from "@/app/ui/button";
 import { updateInvoice, State } from "@/app/lib/actions";
-import { useActionState } from 'react';
+import { useActionState } from "react";
+
+const initialState: State = {
+  message: null,
+  errors: {},
+};
 
 export default function EditInvoiceForm({
   invoice,
